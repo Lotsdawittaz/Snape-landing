@@ -1,9 +1,8 @@
+import { Menu } from "./menu/Menu"
 
 const MainPage: React.FC = () => {
     return (
-        <div>
-            This is main page
-        </div>
+        <Menu></Menu>
     )
 }
 

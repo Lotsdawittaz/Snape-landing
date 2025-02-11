@@ -7,7 +7,7 @@ export interface MenuItem {
 }
 
 export interface BurgerMenuProps {
-  menuItems?: MenuItem[]
+  menuItems: MenuItem[]
 }
 
 export const BurgerMenu = ({ menuItems }: BurgerMenuProps) => {

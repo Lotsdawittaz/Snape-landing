@@ -1,17 +1,35 @@
-import { useState } from "react"
-import { BurgerButton } from "./Burger.styled"
+import { useState } from 'react'
+import { BurgerButton, BurgerLine } from './Burger.styled'
 
-export const BurgerMenu = ({ MenuItems }) => {
-    const [isOpen, setIsOpen] = useState(false)
+export interface MenuItem {
+  label: string
+  href: string
+}
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen)
-    }
+export interface BurgerMenuProps {
+  menuItems?: MenuItem[]
+}
 
-    return (
-        <div>
-            <button onClick={() => console.log('3333')}></button>
-            <BurgerButton></BurgerButton>
-        </div>
-    )
+export const BurgerMenu = ({ menuItems }: BurgerMenuProps) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <div>
+      <BurgerButton
+        onClick={() => {
+          console.log('toggle switch')
+          toggleMenu()
+        }}
+      >
+        <BurgerLine></BurgerLine>
+        <BurgerLine></BurgerLine>
+        <BurgerLine></BurgerLine>
+      </BurgerButton>
+      {isOpen && menuItems.map((item) => <div>{item.label}</div>)}
+    </div>
+  )
 }

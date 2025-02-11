@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Grey+Qo');
+
 body {
   margin: 0;
+  padding: 0;
   color: #fff;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: #212121;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  /* Minimum width for mobile devices */
+  max-width: 100%;
+  /* Prevents horizontal scrolling on small screens */
+  overflow-x: hidden;
+  /* Hides horizontal scrollbar */
+  overflow-y: auto;
+  /* Shows vertical scrollbar only when needed */
 }
